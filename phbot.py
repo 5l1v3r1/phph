@@ -34,9 +34,9 @@ def command_start(m):
     if cid not in knownUsers:
         knownUsers.append(cid)
         userStep[cid] = 0
-        bot.reply_to(m, "Hi, send me a command")
+        bot.reply_to(m, "Hi. Send me command /get or /ph if you want get direct link")
     else:
-        bot.reply_to(m, "Hi, send me a command")
+        bot.reply_to(m, "Hi. Send me command /get or /ph if you want get direct link")
 
 
 
@@ -44,7 +44,7 @@ def command_start(m):
 @bot.message_handler(commands=['ph', 'get'])
 def command_ph(m):
     cid = m.chat.id
-    bot.reply_to(m, "Send me command /get or /ph if you want get direct link")  # show the keyboard
+    bot.reply_to(m, "Send me PornHub video link")  # show the keyboard
     userStep[cid] = 1
 
 @bot.message_handler(func=lambda message: get_user_step(message.chat.id) == 1)
