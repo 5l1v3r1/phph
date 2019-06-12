@@ -106,7 +106,7 @@ Size: {}'''.format(title, url, bitly(url), dur, size))
         userStep[cid] = 1
     except:
         bot.reply_to(m, 'Error :(')
-        userStep[cid] = 2
+        userStep[cid] = 1
 #####PH########
 
 
